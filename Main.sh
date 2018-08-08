@@ -65,5 +65,3 @@ endtime=`date '+%s'`
 usetime=`expr $((10#${endtime})) - $((10#${starttime}))`
 echo -e "\033[33m           用时：`expr $((10#${usetime})) / 3600`时`expr $((10#${usetime})) / 60 % 60`分`expr $((10#${usetime})) % 60`秒 \033[0m"
 
-#删除5天前的卡数据文件
-Timedd=`date -d "6 days ago" "+%Y%m%d"`
