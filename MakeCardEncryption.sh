@@ -138,7 +138,7 @@ formats(){
 sshhT(){
         /usr/bin/expect <<-EOF
 	set seq [lindex $argv 0]
-	spawn ssh 192.168.119.132 "./cutmessageT.sh $seq" 
+	spawn ssh 192.168.119.132 "./GetIMSIAndICCID.sh $seq" 
 	set timeout -1
 	expect "*assword*"
 	set timeout -1
@@ -163,7 +163,7 @@ sshh(){
 
 
 #将获取到的IMSI下载到本机
-#获取第一个参数值并赋值个seq
+#获取第一个参数值并赋值给seq
 scppT(){
         /usr/bin/expect <<-EOF
 	set datapath [lindex $argv 0]
